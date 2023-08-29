@@ -4,9 +4,9 @@ export default function Category({ categories, selectedCategory, handleCategoryC
   return (
     <div className="category-container">
       {categories.map((category, index) => (
-        <div key={index} onClick={() => handleCategoryClick(category)} className={selectedCategory === category ? 'selected' : ''}>
+        <span key={index} onClick={() => handleCategoryClick(category)} className={selectedCategory === category ? 'selected' : ''}>
           {category}
-        </div>
+        </span>
       ))}
     </div>
   )
